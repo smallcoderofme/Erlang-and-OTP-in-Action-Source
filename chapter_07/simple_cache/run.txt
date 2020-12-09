@@ -1,0 +1,26 @@
+﻿werl -pa ebin -boot start_sasl
+
+Eshell V10.7  (abort with ^G)
+1> application:start(simple_cache).
+ok
+2> simple_cache:insert("Shuai", 29).
+=INFO REPORT==== 9-Dec-2020::15:12:16.522000 ===
+create([83,104,117,97,105], 29)
+
+ok
+3> simple_cache:lookup("Shuai"). 
+=INFO REPORT==== 9-Dec-2020::15:13:45.659000 ===
+lookup([83,104,117,97,105])
+
+{ok,29}
+4> simple_cache:insert("Shuai", 30).
+=INFO REPORT==== 9-Dec-2020::15:16:46.077000 ===
+replace([83,104,117,97,105], 30)
+
+ok
+5> simple_cache:lookup("Shuai").    
+=INFO REPORT==== 9-Dec-2020::15:16:49.482000 ===
+lookup([83,104,117,97,105])
+
+{ok,30}
+6> 
